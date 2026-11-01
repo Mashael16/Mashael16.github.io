@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="A compliance platform that helps multi-branch businesses monitor documents, assign renewals, and understand inspection readiness at a glance.">
+  <title>AWAN — Case Study · Mashael Alharbi</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a href="../index.html" class="brand" aria-label="Mashael Alharbi home">
+        <span class="brand-monogram">M.</span> Mashael Alharbi
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="menu-toggle" class="icon-btn menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container case-hero">
+      <a href="../index.html#projects" class="back">← All projects</a>
+      <div class="tiny">CASE STUDY / 02</div>
+      <h1>AWAN <span lang="ar" class="muted">· أوان</span></h1>
+      <p class="intro">Helping multi-branch businesses know which locations are inspection-ready, what needs attention, and who owns each renewal.</p>
+
+      <div class="case-meta">
+        <div class="meta"><small>Role</small><span>Full Stack</span></div>
+        <div class="meta"><small>Project type</small><span>Tuwaiq Academy capstone · <span style="color:var(--gold-ink)">Full marks</span></span></div>
+        <div class="meta"><small>Area</small><span>Compliance and branch readiness</span></div>
+      </div>
+
+      <div class="case-actions">
+        <a class="btn btn-primary" href="https://awann.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
+          Try live demo
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6M19 5l-9 9"/><path d="M19 13v6H5V5h6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="https://github.com/Mashael16/awan" target="_blank" rel="noopener noreferrer">
+          View on GitHub
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6M19 5l-9 9"/><path d="M19 13v6H5V5h6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <figure class="case-shot">
+        <img src="../images/awan-dashboard.png" alt="AWAN dashboard showing branch readiness: Ready, At Risk and Not Ready" loading="lazy">
+        <figcaption>AWAN dashboard</figcaption>
+      </figure>
+
+      <div class="case-content">
+        <nav class="case-toc" aria-label="Case study sections">
+          <a href="#overview">Overview</a>
+          <a href="#problem">The problem</a>
+          <a href="#solution">The solution</a>
+          <a href="#features">What I built</a>
+          <a href="#decision">Key decision</a>
+          <a href="#challenges">Challenges</a>
+          <a href="#results">Tech &amp; results</a>
+        </nav>
+
+        <article class="case-copy">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>AWAN is a web platform for businesses in Saudi Arabia that manage compliance documents across multiple branches. It brings registrations, licenses, employee certificates, renewals, and branch readiness into one place.</p>
+            <div class="measure-row">
+              <div class="measure"><strong>3</strong><span>readiness states</span></div>
+              <div class="measure"><strong>164</strong><span>automated tests</span></div>
+              <div class="measure"><strong>1</strong><span>main branch / company</span></div>
+            </div>
+          </section>
+
+          <section id="problem">
+            <h2>The problem</h2>
+            <p>A company with many branches must track documents with different requirements and expiry dates. A missed municipal license or health certificate can leave a branch unprepared for inspection. Spreadsheets alone do not clearly explain which document creates the risk or who is responsible for resolving it.</p>
+          </section>
+
+          <section id="solution">
+            <h2>How I solved it</h2>
+            <p>AWAN stores documents centrally, evaluates branch readiness automatically, and reports one of three states: Ready, At Risk, or Not Ready, with the reason. It turns renewal needs into assigned tasks and preserves previous document versions so each renewal has a history.</p>
+          </section>
+
+          <section id="features">
+            <h2>What I built</h2>
+            <div class="case-featurelist">
+              <div class="feature"><b>Readiness rules</b><p>Evaluates expiry dates and document importance to determine each branch’s status and explain why.</p></div>
+              <div class="feature"><b>Clear renewal ownership</b><p>Assigns renewal tasks to owners or branch managers and tracks their progress.</p></div>
+              <div class="feature"><b>Document history</b><p>Keeps earlier versions when a license or certificate is renewed.</p></div>
+              <div class="feature"><b>Role-based security</b><p>Owners see all branches; branch managers only access their assigned locations. Files are checked before access.</p></div>
+              <div class="feature"><b>Flexible operations</b><p>Supports custom document types, reminder windows, Excel reports, and a responsive Arabic RTL interface.</p></div>
+            </div>
+          </section>
+
+          <section id="decision">
+            <h2>A key engineering decision</h2>
+            <div class="quote">I defined readiness and renewal rules before implementing them. For example, simply creating a renewal task is not evidence of progress. I also used database constraints to protect the main-branch rules even if an application form is bypassed.</div>
+          </section>
+
+          <section id="challenges">
+            <h2>Challenges &amp; lessons</h2>
+            <h3>Turning policy into consistent logic</h3>
+            <p>I wrote detailed rules and edge cases for Ready, At Risk, and Not Ready.</p>
+            <h3>Protecting business invariants</h3>
+            <p>Database-level constraints enforce main-branch behavior rather than depending only on form validation.</p>
+            <h3>Testing important workflows</h3>
+            <p>I built 164 automated tests for permissions, readiness calculations, and document-renewal flows.</p>
+          </section>
+
+          <section id="results">
+            <h2>Results</h2>
+            <p>Capstone project at Tuwaiq Academy, graded with full marks, and live online.</p>
+            <h3>Technologies used</h3>
+            <p>Python · Django · SQLite · HTML · CSS · XlsxWriter · Django test framework · Git · PythonAnywhere</p>
+          </section>
+        </article>
+      </div>
+
+      <div class="next-project">
+        <div>
+          <div class="tiny">KEEP EXPLORING</div>
+          <h2>Next project: Masar</h2>
+        </div>
+        <a class="btn btn-outline" href="masar.html">
+          View case study
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <div>© 2026 Mashael Alharbi · Designed &amp; built with care.</div>
+    <div class="footer-right">
+      <a href="https://github.com/Mashael16" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="../index.html#projects">Projects ↑</a>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
