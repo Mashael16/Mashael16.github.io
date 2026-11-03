@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f7f8f5">
-  <meta name="description" content="A compliance platform that helps multi-branch businesses monitor documents, assign renewals, and understand inspection readiness at a glance.">
-  <title>AWAN — Case Study · Mashael Alharbi</title>
+  <meta name="description" content="A task-by-task performance platform with explainable scoring, machine-learning checks for unusual manager ratings, and AI-written feedback.">
+  <title>Miyar — Case Study · Mashael Alharbi</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -13,9 +13,7 @@
 
   <header class="nav-wrap">
     <div class="container nav">
-      <a href="../index.html" class="brand" aria-label="Mashael Alharbi home">
-        Mashael Alharbi
-      </a>
+      <a href="../index.html" class="brand" aria-label="Mashael Alharbi home">Mashael Alharbi</a>
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#about">About</a>
@@ -33,22 +31,22 @@
   <main id="main">
     <div class="container case-hero">
       <a href="../index.html#projects" class="back">← All projects</a>
-      <div class="tiny">CASE STUDY / 02</div>
-      <h1>AWAN <span lang="ar" class="muted">· أوان</span></h1>
-      <p class="intro">Helping multi-branch businesses know which locations are inspection-ready, what needs attention, and who owns each renewal.</p>
+      <div class="tiny">CASE STUDY / 01</div>
+      <h1>Miyar <span lang="ar" class="muted">· معيار</span></h1>
+      <p class="intro">Evaluating performance as work happens, using transparent business rules with AI as a second opinion.</p>
 
       <div class="case-meta">
-        <div class="meta"><small>Role</small><span>Full Stack</span></div>
-        <div class="meta"><small>Project type</small><span>Tuwaiq Academy capstone · <span style="color:var(--gold-ink)">Full marks</span></span></div>
-        <div class="meta"><small>Area</small><span>Compliance and branch readiness</span></div>
+        <div class="meta"><small>Role</small><span>Solo development / full-stack</span></div>
+        <div class="meta"><small>Project type</small><span>Graduation project</span></div>
+        <div class="meta"><small>Area</small><span>AI-assisted performance evaluation</span></div>
       </div>
 
       <div class="case-actions">
-        <a class="btn btn-primary" href="https://awann.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-primary" href="https://miyar.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
           Try live demo
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6M19 5l-9 9"/><path d="M19 13v6H5V5h6"/></svg>
         </a>
-        <a class="btn btn-outline" href="https://github.com/Mashael16/awan" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-outline" href="https://github.com/Mashael16/miyar" target="_blank" rel="noopener noreferrer">
           View on GitHub
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6M19 5l-9 9"/><path d="M19 13v6H5V5h6"/></svg>
         </a>
@@ -57,8 +55,8 @@
 
     <div class="container">
       <figure class="case-shot">
-        <img src="../images/awan-dashboard.png" alt="AWAN dashboard showing branch readiness: Ready, At Risk and Not Ready" loading="lazy">
-        <figcaption>AWAN dashboard</figcaption>
+        <img src="../images/miyar-dashboard.png" alt="Miyar performance evaluation dashboard" loading="lazy">
+        <figcaption>Miyar dashboard</figcaption>
       </figure>
 
       <div class="case-content">
@@ -69,61 +67,61 @@
           <a href="#features">What I built</a>
           <a href="#decision">Key decision</a>
           <a href="#challenges">Challenges</a>
-          <a href="#results">Tech &amp; results</a>
+          <a href="#next">What's next</a>
         </nav>
 
         <article class="case-copy">
           <section id="overview">
             <h2>Overview</h2>
-            <p>AWAN is a web platform for businesses in Saudi Arabia that manage compliance documents across multiple branches. It brings registrations, licenses, employee certificates, renewals, and branch readiness into one place.</p>
+            <p>Miyar is a performance evaluation platform built around a simple idea: employees should receive feedback based on the work they complete, not only on a manager’s memory at the end of the year. The system automatically creates a task evaluation, calculates a transparent score, and offers AI-assisted checks and feedback.</p>
             <div class="measure-row">
-              <div class="measure"><strong>3</strong><span>readiness states</span></div>
-              <div class="measure"><strong>164</strong><span>automated tests</span></div>
-              <div class="measure"><strong>1</strong><span>main branch / company</span></div>
+              <div class="measure"><strong>5</strong><span>scoring factors</span></div>
+              <div class="measure"><strong>2</strong><span>ML models</span></div>
+              <div class="measure"><strong>71</strong><span>automated tests</span></div>
             </div>
           </section>
 
           <section id="problem">
             <h2>The problem</h2>
-            <p>A company with many branches must track documents with different requirements and expiry dates. A missed municipal license or health certificate can leave a branch unprepared for inspection. Spreadsheets alone do not clearly explain which document creates the risk or who is responsible for resolving it.</p>
+            <p>Annual reviews can be affected by recency and subjective impressions. Without recorded task-by-task evidence, managers may struggle to explain a rating, and employees have limited visibility into their performance trends.</p>
           </section>
 
           <section id="solution">
             <h2>How I solved it</h2>
-            <p>AWAN stores documents centrally, evaluates branch readiness automatically, and reports one of three states: Ready, At Risk, or Not Ready, with the reason. It turns renewal needs into assigned tasks and preserves previous document versions so each renewal has a history.</p>
+            <p>When an employee submits a task, a Django signal creates an evaluation. A deterministic scoring engine assigns a 0–5 score from quality, deadlines, conduct, attendance, and task importance. Before a manager saves a rating, two Random Forest models provide an expected score and flag possible inconsistencies. An LLM produces structured natural-language insights from recorded metrics.</p>
           </section>
 
           <section id="features">
             <h2>What I built</h2>
             <div class="case-featurelist">
-              <div class="feature"><b>Readiness rules</b><p>Evaluates expiry dates and document importance to determine each branch’s status and explain why.</p></div>
-              <div class="feature"><b>Clear renewal ownership</b><p>Assigns renewal tasks to owners or branch managers and tracks their progress.</p></div>
-              <div class="feature"><b>Document history</b><p>Keeps earlier versions when a license or certificate is renewed.</p></div>
-              <div class="feature"><b>Role-based security</b><p>Owners see all branches; branch managers only access their assigned locations. Files are checked before access.</p></div>
-              <div class="feature"><b>Flexible operations</b><p>Supports custom document types, reminder windows, Excel reports, and a responsive Arabic RTL interface.</p></div>
+              <div class="feature"><b>Explainable scoring</b><p>Weighted business rules and a task-importance multiplier produce a score employees can understand.</p></div>
+              <div class="feature"><b>Machine-learning checks</b><p>A Random Forest regressor predicts an expected score; a classifier flags ratings that appear inconsistent with the evidence.</p></div>
+              <div class="feature"><b>Written insights</b><p>Llama 3.1 via Groq generates structured JSON feedback on strengths and opportunities to improve.</p></div>
+              <div class="feature"><b>Better task assignment</b><p>Ranks five suggested employees for new tasks using quality and on-time delivery history.</p></div>
+              <div class="feature"><b>Secure APIs</b><p>JWT authentication, role-based permissions, service-layer logic, and OpenAPI/Swagger documentation.</p></div>
             </div>
           </section>
 
           <section id="decision">
             <h2>A key engineering decision</h2>
-            <div class="quote">I defined readiness and renewal rules before implementing them. For example, simply creating a renewal task is not evidence of progress. I also used database constraints to protect the main-branch rules even if an application form is bypassed.</div>
+            <div class="quote">AI supports the evaluation process, but it does not determine an employee’s score. The final score comes from explicit, deterministic rules. This separation keeps the result explainable and reduces the risk of a model error silently changing a rating.</div>
           </section>
 
           <section id="challenges">
             <h2>Challenges &amp; lessons</h2>
-            <h3>Turning policy into consistent logic</h3>
-            <p>I wrote detailed rules and edge cases for Ready, At Risk, and Not Ready.</p>
-            <h3>Protecting business invariants</h3>
-            <p>Database-level constraints enforce main-branch behavior rather than depending only on form validation.</p>
-            <h3>Testing important workflows</h3>
-            <p>I built 164 automated tests for permissions, readiness calculations, and document-renewal flows.</p>
+            <h3>Making models reproducible</h3>
+            <p>The locally trained models used scikit-learn 1.7, while the deployment environment had 1.5. I retrained the models in the production environment using fixed random seeds.</p>
+            <h3>Deploying within infrastructure limits</h3>
+            <p>With a 512 MB disk quota, I reused preinstalled scientific libraries instead of installing redundant copies.</p>
+            <h3>Avoiding misleading validation</h3>
+            <p>I removed features that leaked target information and used five-fold cross-validation when evaluating the Random Forest models.</p>
           </section>
 
-          <section id="results">
-            <h2>Results</h2>
-            <p>Capstone project at Tuwaiq Academy, graded with full marks, and live online.</p>
+          <section id="next">
+            <h2>What I'd improve next</h2>
+            <p>The current training data is synthetic. An important next step is using real, HR-reviewed data and ensuring the training and production scoring logic share one source of truth.</p>
             <h3>Technologies used</h3>
-            <p>Python · Django · SQLite · HTML · CSS · XlsxWriter · Django test framework · Git · PythonAnywhere</p>
+            <p>Python · Django · Django REST Framework · React · TypeScript · scikit-learn · pandas · Groq / Llama 3.1 · JWT · SQLite · Docker · PythonAnywhere</p>
           </section>
         </article>
       </div>
@@ -131,9 +129,9 @@
       <div class="next-project">
         <div>
           <div class="tiny">KEEP EXPLORING</div>
-          <h2>Next project: Masar</h2>
+          <h2>Next project: AWAN</h2>
         </div>
-        <a class="btn btn-outline" href="masar.html">
+        <a class="btn btn-outline" href="awan.html">
           View case study
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -144,6 +142,7 @@
   <footer class="container footer">
     <div>© 2026 Mashael Alharbi · Designed &amp; built with care.</div>
     <div class="footer-right">
+      <a href="https://www.linkedin.com/in/mashael-alharbi-0b42822ab/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       <a href="https://github.com/Mashael16" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href="../index.html#projects">Projects ↑</a>
     </div>
